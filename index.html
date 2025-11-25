@@ -13,14 +13,8 @@
   <!-- Custom CSS -->
 </head>
 <body>
-  <!-- Header Section -->
-   <header class="">
-    <h1 class="">Beyond the Shadows</h1>
-    <p class="">by Brent Weeks</p>
-   </header>
-
   <!-- nav bar -->
-    <nav class="">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">Beyond the Shadows</a>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
@@ -35,29 +29,48 @@
             <li class="nav-item"><a class="nav-link" href="#buy">Buy</a></li>
             <li class="nav-item"><a class="nav-link" href="#more">More Books</a></li>
           </ul>
-        </div>
-      </div>
+        </div> <!-- .collapse -->
+      </div> <!-- .container -->
     </nav>
-  <main>
+    
+    <!-- Header Section -->
+    <header class="py-5 text-center text-white bg-dark">
+    <h1 class="display-4 fw-bold">Beyond the Shadows</h1>
+    <p class="lead">by Brent Weeks</p>
+   </header>
+
+  <main class="container my-5">
+    
     <!-- Book Cover + Synopsis -->
-     <div>
-      <div id="bookCover"> 
-        <img src="img/Book3Cover.jpg" alt="The Cover of Beyond the Shadows by Brent Weeks">
+     <div class="row g-4">
+      <div class="col-md-4" id="bookCover"> 
+        <img src="img/Book3Cover.jpg" alt="The Cover of Beyond the Shadows by Brent Weeks" class="img-fluid shadow">
       </div> <!-- End of #bookCover -->
 
-      <div>
-        <h2 id="about">About the Book</h2>
-        <p>"Beyond the Shadows" is the thrilling conclusion to Brent Weeks' Lightbringer series. Dive into a world of magic, political intrigue, and unforgettable characters as the story reaches its epic climax.</p>
-     </div> <!-- End of #about -->
+       <div class="col-md-8" id="about">
+      <h2>Synopsis</h2>
+      <p>
+        In a world where shadows hold power, destinies collide. Beyond the Shadows follows a gripping 
+        tale of sacrifice, darkness, and redemption as heroes rise to confront ancient forces.
+      </p>
+
+      <blockquote class="blockquote border-start ps-3">
+        “The shadows whispered, but he walked forward anyway.”
+      </blockquote>
+    </div>
+  </div> <!-- End of #synopsis -->
     </div> <!-- End of Book Cover + Synopsis -->
 
     <!-- Author Section -->
-     <section id="author">
+     <section id="author" class="my-5 d-flex align-items-center gap-4">
       <div>
         <h3>About the Author</h3>
         <p>
           Brent Weeks is a bestselling fantasy author known for immersive worlds and unforgettable characters.
         </p>
+      </div>
+      <div>
+        <img src="img/BrentWeeks.jpg" alt="Brent Weeks" class="img-fluid shadow">
       </div>
     </section> <!-- #author -->
 
@@ -96,24 +109,29 @@
     </section> <!-- #reviews -->
 
     <!-- Carousel -->
-     <section id="more">
+     <section id="more" class="my-5">
       <h2>The Lightbringer Series</h2>
-      <div id="bookCarousel">
+      <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
 
-          <div class="carousel-item">
-            <img src="img/BookCover.jpg" alt="The Cover of The Lightbringer by Brent Weeks">
+          <div class="carousel-item active">
+            <img src="img/BookCover.jpg" alt="The Cover of The Lightbringer by Brent Weeks" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="img/Book2Cover.jpg" alt="The Cover of The Lightbringer II by Brent Weeks">
+            <img src="img/Book2Cover.jpg" alt="The Cover of The Lightbringer II by Brent Weeks" class="d-block w-100">
           </div>
           <div class="carousel-item">
-            <img src="img/Book3Cover.jpg" alt="The Cover of Beyond the Shadows by Brent Weeks">
+            <img src="img/Book3Cover.jpg" alt="The Cover of Beyond the Shadows by Brent Weeks" class="d-block w-100">
           </div>
         </div><!-- .carousel-inner -->
         
-        <button></button>
-        <button></button>
+        <button class="carousel-control-prev" data-bs-target="#booksCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" data-bs-target="#booksCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
       </div><!-- #bookCarousel  -->
      </section> <!-- #more -->
 
