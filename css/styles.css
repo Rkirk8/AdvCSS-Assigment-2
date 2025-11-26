@@ -1,0 +1,190 @@
+/* =============================
+   Red = #b30000
+   Black = #0b0b0c
+   White = #e6e6e6
+   Shadow = rgba(255, 0, 0, 0.2)
+   light grey = #e6e6e6
+   ============================= */
+
+/* Global ---------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+.cinzel-font {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0b0b0c;
+  color: #e6e6e6;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Red accent */
+:root {
+  --accent-red: #b30000;
+}
+
+/* Header ---------------------- */
+header {
+  background: url('../img/callout-background-2023.jpg') fixed center/cover no-repeat;
+  border-bottom: 4px solid var(--accent-red);
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  transform: skewX(-10deg);
+  color: #d6cfcf;
+  text-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+/* Navbar ---------------------- */
+.navbar {
+  background-color: #000 !important;
+  border-bottom: 2px solid var(--accent-red);
+}
+
+.navbar-brand,
+.nav-link {
+  color: #e6e6e6 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--accent-red) !important;
+}
+
+/* Book & Author Sections ------ */
+.img-fluid.shadow {
+  border: 2px solid var(--accent-red);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* Author image class */
+.author-img {
+  border: 3px solid var(--accent-red);
+  max-width: 250px;
+  display: block;
+}
+
+/* Blockquote ------------------ */
+blockquote {
+  font-style: italic;
+  color: #cccccc;
+  border-left: 4px solid var(--accent-red);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+/* Accordion ------------------- */
+.accordion-button {
+  background-color: #111;
+  color: #e6e6e6;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #1a1a1a;
+  color: var(--accent-red);
+}
+
+.accordion-body {
+  background-color: #0f0f0f;
+}
+
+.accordion-body p {
+  color: #e6e6e6;
+}
+
+/* Carousel -------------------- */
+.carousel-item img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev span,
+.carousel-control-next span {
+  font-size: 2rem;
+  color: var(--accent-red);
+}
+
+/* Tabs ------------------------ */
+.nav-tabs .nav-link {
+  background-color: #111;
+  color: #e6e6e6;
+  border: 1px solid #333;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--accent-red);
+  color: #fff;
+  border-color: var(--accent-red);
+}
+
+.tab-content {
+  background-color: #111;
+  border: 1px solid #333 !important;
+  padding: 1rem;
+}
+
+/* Buy Section ---------------- */
+.btn-success {
+  background-color: var(--accent-red) !important;
+  border-color: var(--accent-red) !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-success:hover {
+  background-color: #800000 !important;
+}
+
+/* Footer ---------------------- */
+footer {
+  background-color: #000;
+  border-top: 2px solid var(--accent-red);
+  padding: 1rem 0;
+  color: #e6e6e6;
+  font-size: 0.9rem;
+}
+
+/* Responsive tweaks ---------------- */
+@media (max-width: 768px) {
+  .author-img {
+    max-width: 100%;
+    margin: 0 auto 1rem;
+  }
+
+  header {
+    height: 60vh;
+  }
+
+  .carousel-item img {
+    max-height: 300px;
+  }
+}

@@ -8,9 +8,11 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <!-- Google Fonts -->
 
   <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
   <!-- nav bar -->
@@ -27,7 +29,7 @@
             <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
             <li class="nav-item"><a class="nav-link" href="#info-tabs">Info</a></li>
             <li class="nav-item"><a class="nav-link" href="#buy">Buy</a></li>
-            <li class="nav-item"><a class="nav-link" href="#more">More Books</a></li>
+            <li class="nav-item"><a class="nav-link" href="#TLBS">More Books</a></li>
           </ul>
         </div> <!-- .collapse -->
       </div> <!-- .container -->
@@ -74,66 +76,94 @@
       </div>
     </section> <!-- #author -->
 
-    <!-- Reviews Section -->
-     <section id="reviews" class="my-5">
-      <h2>Reviews</h2>
+    <!-- Book Details Accordion -->
+    <section id="book-details" class="my-5">
+      <h2>Book Details</h2>
+      <div class="accordion accordion-flush" id="accordionBookDetails">
 
-      <div class="accordion" id="reviewAcc">
+        <!-- Accordion Item 1: Main Character -->
         <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#r1">
-              "A masterpiece of modern fantasy."
+          <h2 class="accordion-header" id="headingCharacter">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCharacter" aria-expanded="true" aria-controls="collapseCharacter">
+              Main Character: Kylar Stern / Azoth
             </button>
           </h2>
-          <div id="r1" class="accordion-collapse collapse show">
+          <div id="collapseCharacter" class="accordion-collapse collapse show" data-bs-parent="#accordionBookDetails">
             <div class="accordion-body">
-              A thrilling and emotional ride from start to finish.
+              <p>Kylar Stern, originally Azoth, is the protagonist of the Night Angel Trilogy. Trained as an assassin by the legendary Durzo Blint, he struggles with his dark past while trying to protect those he loves. Kylar is a complex hero who faces impossible choices, balancing morality, loyalty, and the immense power he wields through the magical “Talent.”</p>
             </div>
           </div>
-        </div><!-- .accordion-item -->
+        </div>
 
+        <!-- Accordion Item 2: The World -->
         <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#r2">
-              "Brent Weeks at his best."
+          <h2 class="accordion-header" id="headingWorld">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWorld" aria-expanded="false" aria-controls="collapseWorld">
+              The World: Cenaria & Surrounding Lands
             </button>
           </h2>
-          <div id="r2" class="accordion-collapse collapse">
+          <div id="collapseWorld" class="accordion-collapse collapse" data-bs-parent="#accordionBookDetails">
             <div class="accordion-body">
-              Rich storytelling and complex characters.
+              <p>The story takes place in a gritty, dark fantasy world dominated by political intrigue, crime, and war. The central kingdom of Cenaria faces threats from powerful neighboring nations and shadowy guilds. Magic exists but is rare and dangerous, often tied to assassins and those with the “Talent.” The world is atmospheric, harsh, and morally gray, making every decision life-altering.</p>
             </div>
           </div>
-        </div><!-- .accordion-item -->
+        </div>
 
-      </div> <!-- .accordion -->
-    </section> <!-- #reviews -->
+        <!-- Accordion Item 3: Magic & Assassins -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMagic">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMagic" aria-expanded="false" aria-controls="collapseMagic">
+              Magic & Assassins
+            </button>
+          </h2>
+          <div id="collapseMagic" class="accordion-collapse collapse" data-bs-parent="#accordionBookDetails">
+            <div class="accordion-body">
+              <p>Magic in the Night Angel Trilogy is rare and feared, and is tied closely to assassins, who use it to enhance their skills. The “Talent” allows Kylar and others to perform incredible feats, but it comes with personal cost and moral challenges. The assassin guild, secretive and powerful, influences politics and events behind the scenes, making every shadow a place of danger.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- End Accordion -->
+    </section><!-- #book-details -->
+
 
     <!-- Carousel -->
-     <section id="more" class="my-5">
+    <section id="TLBS" class="my-5">
       <h2>The Lightbringer Series</h2>
+
       <div id="bookCarousel" class="carousel slide" data-bs-ride="carousel">
+        
+        <!-- Carousel Inner -->
         <div class="carousel-inner">
 
           <div class="carousel-item active">
             <img src="img/BookCover.jpg" alt="The Cover of The Lightbringer by Brent Weeks" class="d-block w-100">
           </div>
+
           <div class="carousel-item">
             <img src="img/Book2Cover.jpg" alt="The Cover of The Lightbringer II by Brent Weeks" class="d-block w-100">
           </div>
+
           <div class="carousel-item">
             <img src="img/Book3Cover.jpg" alt="The Cover of Beyond the Shadows by Brent Weeks" class="d-block w-100">
           </div>
+
         </div><!-- .carousel-inner -->
-        
-        <button class="carousel-control-prev" data-bs-target="#booksCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
+
+
+        <!-- Prev Button -->
+        <button class="carousel-control-prev" data-bs-target="#bookCarousel" data-bs-slide="prev">
+          <span class="bi bi-arrow-left-circle-fill"></span>
         </button>
 
-        <button class="carousel-control-next" data-bs-target="#booksCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
+        <!-- Next Button -->
+        <button class="carousel-control-next" data-bs-target="#bookCarousel" data-bs-slide="next">
+          <span class="bi bi-arrow-right-circle-fill"></span>
         </button>
-      </div><!-- #bookCarousel  -->
-     </section> <!-- #more -->
+
+      </div><!-- #bookCarousel -->
+    </section><!-- #TLBS -->
+
 
     <!-- Info Tabs -->
       <section id="info-tabs" class="my-5">
@@ -208,5 +238,6 @@
   
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
